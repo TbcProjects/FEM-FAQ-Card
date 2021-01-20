@@ -1,0 +1,60 @@
+@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#cd98f8, #6463e7);
+  min-height: 900px;
+  min-width: 100vw; }
+
+.faq-card {
+  min-height: 535px;
+  width: 327px;
+  padding: 0 24px 48px;
+  border-radius: 23px;
+  background-color: azure; }
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: end; }
+  .accordion-container .accordion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 100%;
+    height: 52px;
+    border-bottom: 1px solid black;
+    outline: none;
+    text-align: left;
+    font-size: 18px;
+    transition: background-color 0.2s linear;
+    cursor: pointer; }
+    .accordion-container .accordion:hover {
+      background-color: lightseagreen; }
+    .accordion-container .accordion:first-child {
+      margin-top: 202px; }
+  .accordion-container .accordion-content {
+    padding: 0 20px;
+    border-right: 1px solid whitesmoke;
+    border-left: 1px solid whitesmoke;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s linear; }
+    .accordion-container .accordion-content:last-child(last) {
+      border-bottom: 1px solid black; }
+
+/* Do not forget to attach the  */
+/* attributions to both desktop and mobile. */
+.attribution {
+  font-size: 11px;
+  text-align: center; }
+
+.attribution a {
+  color: #3e52a3; }

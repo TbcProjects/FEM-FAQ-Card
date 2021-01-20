@@ -1,0 +1,35 @@
+@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+
+// typography
+$font: "Kumbh Sans";
+
+$headline: 32px;
+$sub-headline: 13px;
+$body: 12px;
+
+$regular: 700;
+$bold: 700;
+
+// colours
+$gradient-violet: rgb(205, 152, 248);
+$gradient-blue: rgba(100, 99, 231, 1);
+
+$text-dark: #1e2037;
+$text-regular: #4b4c5f;
+$text-light: #4b4c5f;
+
+$divider: #e8e8ea;
+$arrow-icon: #e1724f;
+
+// media queries
+$m-mobile: 375px;
+$m-desktop: 1440px;
+
+// utils
+$card-radius: 23px;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}

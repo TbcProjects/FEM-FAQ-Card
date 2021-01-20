@@ -1,0 +1,11 @@
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient($gradient-violet, $gradient-blue);
+
+  min-height: 900px;
+  min-width: 100vw;
+}
