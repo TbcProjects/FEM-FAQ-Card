@@ -1,18 +1,40 @@
 //card
 .faq-card {
+  position: relative;
+  font-family: $font-stack;
   min-height: 535px;
   width: 327px;
   padding: 0 24px 48px;
   border-radius: $card-radius;
   background-color: azure;
+
+  &__title {
+    @include headline;
+    position: absolute;
+    top: 172px;
+    left: 130px;
+  }
+
+  &__image {
+    position: absolute;
+    top: -109px;
+    left: 18px;
+  }
+
+  &__image-shadow {
+    position: absolute;
+  }
 }
 //image
+
+//title
 
 //accordion
 .accordion-container {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
+  margin-top: 20px;
 
   .accordion {
     display: flex;
@@ -20,33 +42,52 @@
     align-items: center;
     min-width: 100%;
     height: 52px;
-    // background-color: teal;
-    border-bottom: 1px solid black;
+    padding: 20px 0;
     outline: none;
     text-align: left;
     font-size: 18px;
     transition: background-color 0.2s linear;
     cursor: pointer;
 
-    &:hover {
-      background-color: lightseagreen;
+    &::after {
+      content: "\f107";
+      font-family: "Font Awesome 5 free";
+      font-weight: 600;
+    }
+    &.active::after {
+      content: "\f106";
     }
 
+    &__title {
+      @include title;
+    }
     &:first-child {
       margin-top: 202px;
     }
   }
 
+  .title-active {
+    font-weight: 700;
+  }
+
   .accordion-content {
-    padding: 0 20px;
+    @include body;
+
+    display: block;
+    padding: 0;
     border-right: 1px solid whitesmoke;
     border-left: 1px solid whitesmoke;
+    border-bottom: 1px solid $divider;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s linear;
 
     &:last-child(last) {
       border-bottom: 1px solid black;
+    }
+
+    & p {
+      padding-bottom: 16px;
     }
   }
 }

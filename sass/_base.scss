@@ -1,14 +1,33 @@
-@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+// icons
+$font-awesome: "Font Awesome 5 Free";
 
 // typography
-$font: "Kumbh Sans";
+$font-stack: "Kumbh Sans", sans-serif;
 
-$headline: 32px;
-$sub-headline: 13px;
-$body: 12px;
-
-$regular: 700;
-$bold: 700;
+@mixin headline {
+  font-size: 32px;
+  font-weight: 700;
+}
+@mixin title {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: $text-regular;
+}
+@mixin title-active {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: $text-regular;
+}
+@mixin body {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: $text-light;
+}
 
 // colours
 $gradient-violet: rgb(205, 152, 248);
@@ -16,7 +35,7 @@ $gradient-blue: rgba(100, 99, 231, 1);
 
 $text-dark: #1e2037;
 $text-regular: #4b4c5f;
-$text-light: #4b4c5f;
+$text-light: #787887;
 
 $divider: #e8e8ea;
 $arrow-icon: #e1724f;

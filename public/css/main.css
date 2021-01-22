@@ -1,8 +1,9 @@
-@import url(https://fonts.google.com/specimen/Kumbh+Sans);
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -11,50 +12,103 @@ body {
   align-items: center;
   background: linear-gradient(#cd98f8, #6463e7);
   min-height: 900px;
-  min-width: 100vw; }
+  min-width: 100vw;
+}
 
 .faq-card {
-  min-height: 535px;
+  position: relative;
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 490px;
   width: 327px;
   padding: 0 24px 48px;
   border-radius: 23px;
-  background-color: azure; }
+  background-color: azure;
+}
+.faq-card__title {
+  font-size: 32px;
+  font-weight: 700;
+  position: absolute;
+  top: 152px;
+  left: 130px;
+}
+.faq-card__image {
+  position: absolute;
+  top: -109px;
+  left: 18px;
+}
+.faq-card__image-shadow {
+  position: absolute;
+  top: -44px;
+  left: 42px;
+}
 
 .accordion-container {
   display: flex;
   flex-direction: column;
-  justify-content: end; }
-  .accordion-container .accordion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 100%;
-    height: 52px;
-    border-bottom: 1px solid black;
-    outline: none;
-    text-align: left;
-    font-size: 18px;
-    transition: background-color 0.2s linear;
-    cursor: pointer; }
-    .accordion-container .accordion:hover {
-      background-color: lightseagreen; }
-    .accordion-container .accordion:first-child {
-      margin-top: 202px; }
-  .accordion-container .accordion-content {
-    padding: 0 20px;
-    border-right: 1px solid whitesmoke;
-    border-left: 1px solid whitesmoke;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s linear; }
-    .accordion-container .accordion-content:last-child(last) {
-      border-bottom: 1px solid black; }
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+.accordion-container .accordion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 100%;
+  height: 52px;
+  padding: 20px 0;
+  outline: none;
+  text-align: left;
+  font-size: 18px;
+  transition: background-color 0.2s linear;
+  cursor: pointer;
+}
+.accordion-container .accordion::after {
+  content: "\f107";
+  font-family: "Font Awesome 5 free";
+  font-weight: 600;
+}
+.accordion-container .accordion.active::after {
+  content: "\f106";
+}
+.accordion-container .accordion__title {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #4b4c5f;
+}
+.accordion-container .accordion:first-child {
+  margin-top: 202px;
+}
+.accordion-container .title-active {
+  font-weight: 700;
+}
+.accordion-container .accordion-content {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: #787887;
+  display: block;
+  padding: 0;
+  border-right: 1px solid whitesmoke;
+  border-left: 1px solid whitesmoke;
+  border-bottom: 1px solid #e8e8ea;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s linear;
+}
+.accordion-container .accordion-content:last-child(last) {
+  border-bottom: 1px solid black;
+}
+.accordion-container .accordion-content p {
+  padding-bottom: 16px;
+}
 
 /* Do not forget to attach the  */
 /* attributions to both desktop and mobile. */
 .attribution {
   font-size: 11px;
-  text-align: center; }
+  text-align: center;
+}
 
 .attribution a {
-  color: #3e52a3; }
+  color: #3e52a3;
+}
