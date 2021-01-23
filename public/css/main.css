@@ -117,6 +117,8 @@ body {
           margin: 0; } }
   .accordion-container .title-active {
     font-weight: 700; }
+  .accordion-container .icon-active {
+    transform: rotate(180deg); }
   .accordion-container .accordion-content {
     font-size: 12px;
     font-weight: 400;

@@ -116,12 +116,13 @@
     transition: background-color 0.2s linear;
     cursor: pointer;
 
-    &__icon-up {
-    }
-
     &__title {
       @include title;
     }
+
+    &__icon {
+    }
+
     &:first-child {
       margin-top: 202px;
 
@@ -133,6 +134,10 @@
 
   .title-active {
     font-weight: 700;
+  }
+
+  .icon-active {
+    transform: rotate(180deg);
   }
 
   .accordion-content {
