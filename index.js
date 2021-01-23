@@ -1,27 +1,29 @@
 const accordions = document.getElementsByClassName("accordion");
-const accIcon = document.querySelectorAll(".accordion");
+// const accIcon = document.querySelectorAll(".accordion");
 const accTitle = document.querySelectorAll(".accordion__title");
 
+
+
+
 //
-accIcon.forEach((icon) => {
-  icon.addEventListener("click", (e) => {
-    const content = icon.nextElementSibling;
-    if (content.style.maxHeight) {
-      icon.classList.remove("active");
-    } else {
-      icon.classList.add("active");
-    }
-  });
-});
+// accIcon.forEach((icon) => {
+//   icon.addEventListener("click", (e) => {
+//     const content = icon.nextElementSibling;
+//     if (content.style.maxHeight) {
+//       icon.classList.remove("active");
+//     } else {
+//       icon.classList.add("active");
+//     }
+//   });
+// });
 
 accTitle.forEach((title) => {
   title.addEventListener("click", (e) => {
     const t = title.classList;
-
-    if (!t.contains("title-active")) {
-      t.add("title-active");
-    } else {
+    if (t.contains("title-active")) {
       t.remove("title-active");
+    } else {
+      t.add("title-active");
     }
   });
 });
